@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+
+<div id="background-image">
+                <div id="black-cover">
+
+    		    	<div id="before-login">
+	    		    	<img id="logo" src="{% static './images/netflix-logo.png' %}">
+		        		<a href="{% url 'login'%}" id="sign-in-link">Sign In</a>
+	    	    	</div>
+    			    <div id="center">
+    				    <h1>Unlimited movies, TV<br>shows and more.</h1>
+	    		    	<div id="description">
+		        			Watch anywhere. Cancel anytime.
+	    	    		</div>
+    			    	<div id="input-area">
+					        <input type="text" placeholder="Email address">
+				    	    <button type="button">TRY IT NOW</button>
+			        	</div>
+		        	</div>
+	        	</div>
+        	</div>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<div id="header-after-login">
+	    	<img id="menu" class="js-menu" src="{% static './images/menu.svg' %}">
+		    <nav>
+	    		<img id="menu" class="js-menu" src="{% static './images/menu.svg' %}">
+		    	<ul>
+    				<li><a href="{% url 'movies'%}">HOME</a></li>
+					<li><form id="form-logout" action="{% url 'logout'%}" method="POST">
+							{% csrf_token %}
+							<input type="submit" value="LOGOUT">
+					</li>
+	    		</ul>
+    		</nav>
+	    	<img id="logo" src="{% static './images/netflix-logo.png' %}">
+	    </div>
+	    <div id="movies">
+		    <h2 class="movie-category">Drama</h2>
+    		<div class="movie-slider">
+	    		<div class="movie-slider-inside">
+					{% for movie in movies1 %}
+		    			<a href="{% url 'movies_detail' movie.id %}"><img src="{% static movie.image_path %}"></a>
+			    	{% endfor %}
+		    	</div>
+    		</div>
+	    	<h2 class="movie-category">Action</h2>
+		    <div class="movie-slider">
+			    <div class="movie-slider-inside">
+    				{% for movie in movies2 %}
+		    			<a href="{% url 'movies_detail' movie.id %}"><img src="{% static movie.image_path %}"></a>
+			    	{% endfor %}
+    			</div>
+	    	</div>
+		    <h2 class="movie-category">Adventure</h2>
+    		<div class="movie-slider">
+	    		<div class="movie-slider-inside">
+		    		{% for movie in movies1 %}
+		    			<a href="{% url 'movies_detail' movie.id %}"><img src="{% static movie.image_path %}"></a>
+			    	{% endfor %}
+		    	</div>
+    		</div>
+	    	<h2 class="movie-category">Anime</h2>
+		    <div class="movie-slider">
+    			<div class="movie-slider-inside">
+	    			{% for movie in movies2 %}
+		    			<a href="{% url 'movies_detail' movie.id %}"><img src="{% static movie.image_path %}"></a>
+			    	{% endfor %}
+	    		</div>
+    		</div>
+	    	<h2 class="movie-category">Comedies</h2>
+		    <div class="movie-slider">
+    			<div class="movie-slider-inside">
+	    			{% for movie in movies1 %}
+		    			<a href="{% url 'movies_detail' movie.id %}"><img src="{% static movie.image_path %}"></a>
+			    	{% endfor %}
+	    		</div>
+		    </div>
+    		<h2 class="movie-category">Horror</h2>
+	    	<div class="movie-slider">
+		    	<div class="movie-slider-inside">
+			    	{% for movie in movies2 %}
+		    			<a href="{% url 'movies_detail' movie.id %}"><img src="{% static movie.image_path %}"></a>
+			    	{% endfor %}
+			    </div>
+    		</div>
+	    	<h2 class="movie-category">Series</h2>
+		    <div class="movie-slider">
+			    <div class="movie-slider-inside">
+    				{% for movie in movies1 %}
+		    			<a href="{% url 'movies_detail' movie.id %}"><img src="{% static movie.image_path %}"></a>
+			    	{% endfor %}
+    			</div>
+	    	</div>
+	    </div>
+    </div>
+{% endblock %}

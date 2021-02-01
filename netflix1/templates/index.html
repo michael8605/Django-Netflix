@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+	    <html lang="en">
+    	<head>
+	        <meta charset="UTF-8">
+	        <link rel="stylesheet" href="{% static 'styles.css' %}">
+	        <title>Netflix</title>
+		    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'images/favicon.png' %}">
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    </head>
+	    <body>
+        {% block content %}
+        {% endblock %}
+        <script src="{% static 'jquery.js' %}"></script>
+	        <script type="text/javascript" src="{% static 'netflix.js' %}"></script>
+	    </body>
+    	</html>

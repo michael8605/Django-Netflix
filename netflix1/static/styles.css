@@ -1,0 +1,336 @@
+/****** COMMON ******/
+
+body {
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin: 0;
+    background-color: black;
+}
+
+#black {
+    background-color: #171717;
+    min-height: 100%;
+}
+
+/****** HEADER MENU ******/
+
+nav {
+  background: #171717;
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  text-align: center;
+  width: 0;
+  height: 100%;
+  transition: .5s;
+  text-align: left
+}
+
+nav.open-menu {
+  width: 100%;
+}
+
+nav #menu {
+    float: none;
+}
+
+nav a {
+  color: white;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+/****** HEADER BEFORE LOGIN ******/
+
+#header-before-login {
+    width: 100%;
+}
+
+#logo {
+    width: 200px;
+    padding: 20px;
+}
+
+#sign-in-link {
+    float: right;
+    text-align: center;
+    color: white;
+    margin: 20px;
+    padding: 10px;
+    width: 95px;
+    height: 30px;
+    text-decoration: none;
+    background-color: red;
+    font-size: 1.3rem;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 980px) {
+    #logo {
+        width: 300px;
+        padding: 50px;
+    }
+
+    #sign-in-link {
+        margin: 50px;
+        padding: 20px;
+        font-size: 2.3rem;
+        width: 135px;
+        height: 45px;
+    }
+}
+
+/****** HEADER AFTER LOGIN ******/
+
+#header-after-login {
+    width: 100%;
+}
+
+#menu {
+    width: 60px;
+    padding: 50px;
+    float: left;
+    fill: white;
+}
+
+#header-after-login #logo {
+    width: 200px;
+    padding: 50px 0 0 10px;
+}
+
+/****** HOME ******/
+
+#background-image {
+    background-image: url('./images/netflix-background.jpg');
+    background-repeat: y-repeat;
+    height: 100%;
+}
+
+#black-cover {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+}
+
+#center {
+    width: 600px;
+    margin: 250px auto;
+    text-align: center;
+    color: white;
+}
+
+#center h1 {
+    font-size: 3.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+#description {
+    font-size: 1.5rem;
+    margin: 30px 0;
+}
+
+#input-area {
+    height: 55px;
+}
+
+#center input {
+    width: 400px;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 10px;
+    font-size: 0.9rem;
+    border: 0;
+}
+
+#center button {
+    width: 180px;
+    height: 100%;
+    background-color: red;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: normal;
+    border: 0px;
+    border-bottom: 4px solid red;
+}
+
+@media screen and (max-width: 980px) {
+    #center {
+        width: 90%;
+    }
+
+    #center h1 {
+        font-size: 4.1rem;
+    }
+
+    #description {
+        font-size: 2.5rem;
+    }
+
+    #input-area {
+        height: 85px;
+    }
+
+    #center input {
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        padding: 0 0 0 20px;
+        font-size: 2.2rem;
+    }
+
+    #center button {
+        margin-top: 30px;
+        width: 40%;
+        height: 100%;
+        font-size: 2.3rem;
+    }
+}
+
+/****** SIGN IN / SIGN UP ******/
+
+h1 {
+    font-size: 6rem;
+}
+#trailer{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+#trailer iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+}
+#description {
+color : white;
+padding: 20px;
+}
+
+#form-logout input[type=submit]{
+    margin-top: 40px;
+    background-color: red;
+    height: 50px;
+    width: 160px;
+}
+
+#form-sign-in {
+    width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    color: white;
+}
+
+#form-sign-in input {
+    width: 100%;
+    height: 90px;
+    background-color: gray;
+    color: white;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    border-radius: 10px;
+    font-size: 3rem;
+}
+
+#form-sign-in input::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+#form-sign-in input[type=submit] {
+    margin-top: 40px;
+    background-color: red;
+}
+
+@media screen and (max-width: 980px) {
+    #form-sign-in {
+        width: 90%;
+        text-align: left;
+    }
+
+    #form-sign-in input {
+        width: 100%;
+        height: 150px;
+        background-color: gray;
+        color: white;
+        padding-left: 30px;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+/****** Movies ******/
+
+#movies {
+    padding: 0 0 100px 50px;
+    margin: 0;
+}
+
+.movie-category {
+    color: white;
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.movie-slider {
+    width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 100px;
+}
+
+.movie-slider-inside {
+    width: 2100px;
+}
+
+.movie-slider img {
+    width: 400px;
+}
+
+/****** Movie Detail ******/
+
+#movie {
+    position: relative;
+    width: 100%;
+}
+
+#movie img {
+    width: 100%;
+}
+
+#movie-play {
+    top: 300px;
+    left: 70px;
+    width: 250px;
+    padding: 20px;
+    color: white;
+    position: absolute;
+    background-color: red;
+    text-align: center;
+    font-size: 3rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#movie-title {
+    top: 150px;
+    left: 70px;
+    padding: 20px;
+    color: white;
+    position: absolute;
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-shadow: 2px 4px black;
+}
+
+#movie-description {
+    padding: 30px;
+    color: #b9b9b9;
+    font-size: 2rem;
+}

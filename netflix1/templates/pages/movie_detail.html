@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<div id="header-after-login">
+	    	<img id="menu" class="js-menu" src="{% static './images/menu.svg' %}">
+		    <nav>
+	    		<img id="menu" class="js-menu" src="{% static './images/menu.svg' %}">
+		    	<ul>
+    				<li><a href="{% url 'movies'%}">HOME</a></li>
+					<li><form id="form-logout" action="{% url 'logout'%}" method="POST">
+							{% csrf_token %}
+							<input type="submit" value="LOGOUT">
+					</li>
+	    		</ul>
+    		</nav>
+	    	<img id="logo" src="{% static './images/netflix-logo.png' %}">
+	    </div>
+		{{ movies1.description}}
+
+
+        <div id="trailer">
+			{{ test }}
+            <iframe width="560" height="315" src="{{ movies1.link }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+		<div id ="description">
+			<h2>DESCRIPTION</h2>
+			<p>{{ movies1.description }}</p>
+		</div>
+
+{% endblock %}
