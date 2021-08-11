@@ -2,7 +2,7 @@ from .views import HomeView, LoginView, MoviesView, SignUpView, ProcessFormView,
 from django.urls import path
 
 urlpatterns = [
-    path('home/', HomeView.as_view(), name = 'home'),
+    path('', HomeView.as_view(), name = 'home'),
     path('login', LoginView.as_view(), name = 'login'),
     path('logout', LogoutView.as_view(), name = 'logout'),
     path('movies/', MoviesView.as_view(), name = 'movies'),
