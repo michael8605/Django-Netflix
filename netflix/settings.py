@@ -89,7 +89,16 @@ WSGI_APPLICATION = 'netflix.wsgi.application'
 #     }
 # }
 
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ddf2sp903o19mn',
+        'USER': 'monsthbedbcbiu',
+        'HOST': 'ec2-18-235-4-83.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'PASSWORD': 'd0387c38f9392c9603ef1e99f61d4b60266c046422aa63d3872e452d5d03ffa7',
+    }
+}
 
 
 
